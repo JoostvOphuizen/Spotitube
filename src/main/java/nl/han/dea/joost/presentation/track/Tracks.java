@@ -1,28 +1,34 @@
 package nl.han.dea.joost.presentation.track;
 
-import jakarta.ws.rs.Path;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import nl.han.dea.joost.service.track.TrackService;
 
-@Path("/playlists")
+import static nl.han.dea.joost.service.login.AuthenticationService.authenticateToken;
+
+@Path("/tracks")
 public class Tracks {
 
-    /*@GET
-    @Path("/{id}/tracks")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response getTracks(@QueryParam("token") String token, @QueryParam("forPlaylist") int id, @PathParam("id") int playlistId) {
-        return Response.status(201).entity(TrackService.getTracks(playlistId)).build();
+    private TrackService trackService;
+
+    @Inject
+    public void setTrackService(TrackService TrackService) {
+        this.trackService = TrackService;
     }
 
-    @POST
-    @Path("/{id}/tracks")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @GET
+    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addTrack(@QueryParam("token") String token, @QueryParam("forPlaylist") int id, @PathParam("id") int trackId) {
-        //check authorization from token
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getTracks(@QueryParam("token") String token, @QueryParam("forPlaylist") int playlistId) {
+        if (!authenticateToken(token)){
+            return Response.status(401).build();
+        }
+        return trackService.getTracks(playlistId);
+    }
 
-        TrackService.addTrack(id, trackId);
 
-        return Response.status(201).entity(TrackService.getTracksExceptPlaylistTracks(id)).build();
-    }*/
 
 }

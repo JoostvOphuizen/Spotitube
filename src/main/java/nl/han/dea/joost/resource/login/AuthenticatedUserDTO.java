@@ -2,16 +2,15 @@ package nl.han.dea.joost.resource.login;
 
 public class AuthenticatedUserDTO {
 
-    private TokenDTO token;
+    private String token;
     private String user;
 
-    public TokenDTO getToken() {
+    public String getToken() {
         return token;
     }
 
     public void setToken(String token) {
-        this.token = new TokenDTO();
-        this.token.setToken(token);
+        this.token = token;
     }
 
     public String getUser() {
