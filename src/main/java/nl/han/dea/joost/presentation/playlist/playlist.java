@@ -1,13 +1,11 @@
 package nl.han.dea.joost.presentation.playlist;
 
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.Path;
 
 @Path("/playlists")
 public class playlist {
 
-    @GET
+    /*@GET
     public Response getPlaylists() {
         Response response = Response.ok().entity(PlaylistService.getPlaylists()).build();
         if(response == null) {
@@ -55,6 +53,6 @@ public class playlist {
         PlaylistService.editPlaylist(id, playlist);
 
         return Response.status(200).entity(PlaylistService.getPlaylists()).build();
-    }
+    }*/
 
 }

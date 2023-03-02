@@ -1,13 +1,11 @@
 package nl.han.dea.joost.presentation.track;
 
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.Path;
 
 @Path("/playlists")
 public class Tracks {
 
-    @GET
+    /*@GET
     @Path("/{id}/tracks")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
@@ -25,6 +23,6 @@ public class Tracks {
         TrackService.addTrack(id, trackId);
 
         return Response.status(201).entity(TrackService.getTracksExceptPlaylistTracks(id)).build();
-    }
+    }*/
 
 }
