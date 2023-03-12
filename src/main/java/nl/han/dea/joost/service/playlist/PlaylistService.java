@@ -33,4 +33,8 @@ public class PlaylistService {
         dataBase.editPlaylist(id, playlist);
         return getPlaylists();
     }
+
+    public DataBase getDataBase() {
+        return dataBase;
+    }
 }

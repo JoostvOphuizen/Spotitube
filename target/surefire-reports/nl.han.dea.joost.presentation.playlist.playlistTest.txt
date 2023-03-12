@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: nl.han.dea.joost.presentation.playlist.playlistTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in nl.han.dea.joost.presentation.playlist.playlistTest

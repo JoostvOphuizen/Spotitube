@@ -33,4 +33,8 @@ public class TrackService {
         dataBase.deleteTrackFromPlaylist(trackId, playlistId);
         return getTracks(playlistId);
     }
+
+    public DataBase getDataBase() {
+        return dataBase;
+    }
 }

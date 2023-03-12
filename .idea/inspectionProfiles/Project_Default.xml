@@ -2,7 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="AutoCloseableResource" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,nl.han.dea.joost.presentation.login.Login,login,nl.han.dea.joost.service.login.LoginService,login" />
+      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,nl.han.dea.joost.presentation.login.Login,login,nl.han.dea.joost.service.login.LoginService,login,nl.han.dea.joost.presentation.playlist.Playlist,addPlaylist|addTrack|deleteTrack,nl.han.dea.joost.service.playlist.PlaylistService,addPlaylist|deletePlaylist,nl.han.dea.joost.service.track.TrackService,addTrack|deleteTrack,java.sql.Connection,prepareStatement,nl.han.dea.joost.datasource.login.LoginSQLStatementBuilder,buildGetUserPreparedStatement|buildUpdateTokenPreparedStatement,nl.han.dea.joost.datasource.authentication.AuthenticationDAO,checkTokenInDatabase,nl.han.dea.joost.datasource.authentication.AuthenticateSQLStatementBuilder,buildCheckTokenPreparedStatement" />
     </inspection_tool>
   </profile>
 </component>
